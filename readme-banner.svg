@@ -1,66 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Security-First PHP Authentication banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Hardened Auth System banner">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#050b14"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020617"/>
       <stop offset="0.45" stop-color="#0a1628"/>
       <stop offset="1" stop-color="#0c1e3d"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0" y1="180" x2="1200" y2="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#38bdf8" stop-opacity="0.28"/>
-      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="rgba(15,23,42,0.72)"/>
+      <stop offset="1" stop-color="rgba(2,6,23,0.55)"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#67e8f9"/>
-      <stop offset="1" stop-color="#0284c7"/>
-    </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0V48" fill="none" stroke="#1e3a5f" stroke-width="0.6" opacity="0.45"/>
+    <pattern id="fineGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#38bdf8" stroke-width="0.4" opacity="0.12"/>
     </pattern>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00f5ff" flood-opacity="0.35"/>
+    </filter>
   </defs>
 
-  <rect width="1200" height="360" fill="url(#bg)"/>
-  <rect width="1200" height="360" fill="url(#grid)"/>
+  <rect width="1280" height="640" fill="url(#bgGrad)"/>
+  <rect width="1280" height="640" fill="url(#fineGrid)" opacity="0.9"/>
 
-  <!-- Dim code-like background (decorative, very low contrast) -->
-  <g fill="#38bdf8" font-family="Consolas, Courier New, monospace" font-size="11" opacity="0.085">
-    <text x="620" y="42">$pdo-&gt;prepare('SELECT ... WHERE email = ?');</text>
-    <text x="620" y="62">password_hash($pass, PASSWORD_ARGON2ID, $opts);</text>
-    <text x="620" y="82">session_regenerate_id(true);</text>
-    <text x="620" y="102">header('X-Frame-Options: DENY');</text>
-    <text x="620" y="122">INSERT INTO login_attempts (ip_address ...)</text>
-    <text x="620" y="142">hash_equals($_SESSION['_csrf'], $token);</text>
-    <text x="620" y="162">PDO::ATTR_EMULATE_PREPARES =&gt; false</text>
-    <text x="620" y="182">if ($rateLimiter-&gt;isBlocked($ip)) { ... }</text>
-    <text x="620" y="202">setcookie(..., ['httponly' =&gt; true, 'samesite' =&gt; 'Strict']);</text>
+  <!-- Neon blue atmosphere blobs (SaaS / cyber depth) -->
+  <ellipse cx="200" cy="480" rx="420" ry="320" fill="#00f5ff" opacity="0.07"/>
+  <ellipse cx="1020" cy="140" rx="380" ry="300" fill="#60a5fa" opacity="0.06"/>
+  <ellipse cx="720" cy="380" rx="500" ry="280" fill="#38bdf8" opacity="0.04"/>
+
+  <!-- Dense code rain (background layer) -->
+  <g fill="rgba(56,189,248,0.07)" font-family="Consolas, monospace" font-size="10">
+    <text x="40" y="28">namespace App\Security;</text>
+    <text x="40" y="42">final class RateLimiter { private PDO $pdo; }</text>
+    <text x="40" y="56">DELETE FROM login_attempts WHERE ip_address = :ip</text>
+    <text x="40" y="70">PDO::ATTR_EMULATE_PREPARES =&gt; false</text>
+    <text x="380" y="22">hash_equals($sessionToken, $postedToken);</text>
+    <text x="380" y="36">ini_set('session.cookie_httponly', '1');</text>
+    <text x="380" y="50">password_needs_rehash($hash, PASSWORD_ARGON2ID)</text>
+    <text x="720" y="30">$config = require __DIR__ . '/../config/config.php';</text>
+    <text x="720" y="44">header('X-Content-Type-Options: nosniff');</text>
+    <text x="980" y="26">INSERT INTO login_attempts (ip_address, attempted_at)</text>
+    <text x="980" y="40">VALUES (:ip, NOW())</text>
+    <text x="980" y="54">if ($attempts &gt;= $max) { $blockedUntil = ... }</text>
+    <text x="180" y="600">htmlspecialchars($message, ENT_QUOTES, 'UTF-8')</text>
+    <text x="180" y="614">csrf_token hidden input + POST validate</text>
+    <text x="520" y="598">public/index.php -&gt; Location: /login.php</text>
+    <text x="520" y="612">require_once __DIR__ . '/../src/bootstrap.php';</text>
+    <text x="880" y="602">CREATE TABLE users ( email VARCHAR(190) UNIQUE ...</text>
+    <text x="880" y="616">ENGINE=InnoDB CHARSET=utf8mb4</text>
   </g>
 
-  <ellipse cx="980" cy="40" rx="220" ry="120" fill="#0ea5e9" opacity="0.07"/>
-  <ellipse cx="180" cy="300" rx="280" ry="140" fill="#2563eb" opacity="0.09"/>
-  <rect width="1200" height="360" fill="url(#glow)"/>
-
-  <!-- Corner monogram placeholder (swap for your own logo SVG or image if you want) -->
-  <g transform="translate(1108 20)">
-    <rect x="0" y="0" width="52" height="52" rx="10" fill="#0b1220" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
-    <text x="26" y="34" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">LM</text>
+  <!-- Secondary code column (left, vertical stack) -->
+  <g fill="rgba(96,165,250,0.11)" font-family="Consolas, monospace" font-size="11" transform="translate(0 140)">
+    <text x="24" y="0">// rate-limit</text>
+    <text x="24" y="18">$ip = $_SERVER['REMOTE_ADDR'];</text>
+    <text x="24" y="36">$stmt-&gt;prepare(...);</text>
+    <text x="24" y="54">session_regenerate_id(true);</text>
+    <text x="24" y="72">HttpOnly + SameSite</text>
+    <text x="24" y="90">PASSWORD_ARGON2ID</text>
   </g>
 
-  <rect x="64" y="100" width="4" height="160" rx="2" fill="url(#accent)" opacity="0.95"/>
-  <text x="92" y="148" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0.35em">CYBERSECURITY ENGINEERING</text>
-  <text x="92" y="210" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.02em">Security-First PHP Auth</text>
-  <text x="92" y="248" fill="#7dd3fc" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="500">Argon2id | PDO | Session hardening | SQL rate limiting</text>
-
-  <!-- Shield + soft glow rings (no filters, GitHub-safe) -->
-  <g transform="translate(1000 88)">
-    <circle cx="48" cy="48" r="58" fill="#22d3ee" opacity="0.08"/>
-    <circle cx="48" cy="48" r="52" fill="#38bdf8" opacity="0.06"/>
-    <circle cx="48" cy="48" r="46" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.5"/>
-    <path d="M48 22L62 32V52C62 62 48 70 48 70S34 62 34 52V32Z" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linejoin="round"/>
-    <circle cx="48" cy="48" r="6" fill="#22d3ee" opacity="0.85"/>
+  <!-- Rotated code panel (right, more lines) -->
+  <g transform="translate(560 88) rotate(-4)" font-family="Consolas, monospace" font-size="14" fill="rgba(0,245,255,0.14)">
+    <text x="0" y="0">// ADVANCED SECURITY CORE</text>
+    <text x="0" y="22">$hash = password_hash($p, PASSWORD_ARGON2ID, $opts);</text>
+    <text x="0" y="44">$stmt = $pdo-&gt;prepare(</text>
+    <text x="0" y="66">  'SELECT id, password_hash FROM users WHERE email = :e'</text>
+    <text x="0" y="88">);</text>
+    <text x="0" y="110">$stmt-&gt;execute(['e' =&gt; $email]);</text>
+    <text x="0" y="132">if (!password_verify($pass, $row['password_hash'])) {</text>
+    <text x="0" y="154">  $rateLimiter-&gt;registerFailure($ip);</text>
+    <text x="0" y="176">}</text>
+    <text x="0" y="198">session_regenerate_id(true);</text>
+    <text x="0" y="220">header('X-Frame-Options: DENY');</text>
   </g>
 
-  <line x1="92" y1="268" x2="820" y2="268" stroke="#334155" stroke-width="1" opacity="0.8"/>
-  <text x="92" y="292" fill="#64748b" font-family="Consolas, monospace" font-size="12" letter-spacing="0.06em">PURE PHP | ZERO FRAMEWORKS | DEFENSE IN DEPTH</text>
-  <text x="92" y="322" fill="#7dd3fc" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Explore the repository below - audit the source code.</text>
-</svg>
+  <!-- Mini "terminal" strip top-right -->
+  <rect x="920" y="72" width="340" height="118" rx="10" fill="rgba(2,6,23,0.75)" stroke="rgba(0,245,255,0.35)" stroke-width="1"/>
+  <text x="936" y="96" fill="#38bdf8" font-family="Consolas, monospace" font-size="10">$ php -r "echo PASSWORD_ARGON2ID ? 'ok' : 'no';"</text>
+  <text x="936" y="112" fill="rgba(147,197,253,0.5)" font-family="Consolas, monospace" font-size="10"># schema: users | login_attempts</text>
+  <text x="936" y="128" fill="rgba(56,189,248,0.45)" font-family="Consolas, monospace" font-size="10">mysql&gt; SELECT COUNT(*) FROM login_attempts;</text>
+  <text x="936" y="144" fill="rgba(56,189,248,0.35)" font-family="Consolas, monospace" font-size="10">-- sliding window + blocked_until</text>
+  <text x="936" y="160" fill="rgba(96,165,250,0.4)" font-family="Consolas, monospace" font-size="10">git log --oneline | head -n 3</text>
+  <text x="936" y="176" fill="rgba(147,197,253,0.35)" font-family="Consolas, monospace" font-size="10">composer: (none) // zero-framework</text>
+
+  <!-- Glass card behind hero -->
+  <rect x="56" y="96" width="720" height="468" rx="18" fill="url(#cardGrad)" stroke="rgba(0,245,255,0.28)" stroke-width="1.5"/>
+  <rect x="56" y="96" width="720" height="468" rx="18" fill="none" stroke="rgba(96,165,250,0.15)" stroke-width="6" opacity="0.5"/>
+
+  <!-- Abstract neon chart lines (decorative) -->
+  <polyline points="760,520 800,480 860,500 920,440 980,460 1040,400 1100,420" fill="none" stroke="rgba(0,245,255,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="780,540 830,510 890,530 950,470 1010,490" fill="none" stroke="rgba(96,165,250,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- PHP badge -->
+  <rect x="88" y="124" width="178" height="42" rx="8" fill="rgba(0,245,255,0.12)" stroke="#00f5ff" stroke-width="1.5"/>
+  <text x="177" y="152" text-anchor="middle" fill="#e0f2fe" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="1">PHP 8.3 + SQL</text>
+
+  <text x="88" y="206" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="5">CYBERSECURITY ENGINEERING</text>
+
+  <text x="88" y="286" fill="#60a5fa" font-family="Segoe UI, Arial, sans-serif" font-size="70" font-weight="900" filter="url(#softGlow)">Hardened Auth</text
