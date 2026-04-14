@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/readme-banner.svg" alt="Security-First PHP Authentication banner" width="100%" />
+  <img src="./readme-banner.svg" alt="Security-First PHP Authentication banner" width="100%" />
 </p>
 
 <p align="center">
