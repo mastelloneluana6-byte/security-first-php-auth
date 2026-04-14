@@ -1,3 +1,66 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mastelloneluana6-byte/security-first-php-auth/main/readme-banner.svg" alt="Security-First PHP Authentication banner" width="100%" />
-</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Security-First PHP Authentication banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050b14"/>
+      <stop offset="0.45" stop-color="#0a1628"/>
+      <stop offset="1" stop-color="#0c1e3d"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="180" x2="1200" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#38bdf8" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#1e3a5f" stroke-width="0.6" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+
+  <!-- Dim code-like background (decorative, very low contrast) -->
+  <g fill="#38bdf8" font-family="Consolas, Courier New, monospace" font-size="11" opacity="0.085">
+    <text x="620" y="42">$pdo-&gt;prepare('SELECT ... WHERE email = ?');</text>
+    <text x="620" y="62">password_hash($pass, PASSWORD_ARGON2ID, $opts);</text>
+    <text x="620" y="82">session_regenerate_id(true);</text>
+    <text x="620" y="102">header('X-Frame-Options: DENY');</text>
+    <text x="620" y="122">INSERT INTO failed_login_attempts (ip_address ...)</text>
+    <text x="620" y="142">hash_equals($_SESSION['_csrf'], $token);</text>
+    <text x="620" y="162">PDO::ATTR_EMULATE_PREPARES =&gt; false</text>
+    <text x="620" y="182">if ($rateLimiter-&gt;isBlocked($ip)) { ... }</text>
+    <text x="620" y="202">setcookie(..., ['httponly' =&gt; true, 'samesite' =&gt; 'Strict']);</text>
+  </g>
+
+  <ellipse cx="980" cy="40" rx="220" ry="120" fill="#0ea5e9" opacity="0.07"/>
+  <ellipse cx="180" cy="300" rx="280" ry="140" fill="#2563eb" opacity="0.09"/>
+  <rect width="1200" height="360" fill="url(#glow)"/>
+
+  <!-- Corner monogram placeholder (swap for your own logo SVG or image if you want) -->
+  <g transform="translate(1108 20)">
+    <rect x="0" y="0" width="52" height="52" rx="10" fill="#0b1220" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
+    <text x="26" y="34" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">LM</text>
+  </g>
+
+  <rect x="64" y="100" width="4" height="160" rx="2" fill="url(#accent)" opacity="0.95"/>
+  <text x="92" y="148" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0.35em">CYBERSECURITY ENGINEERING</text>
+  <text x="92" y="210" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.02em">Security-First PHP Auth</text>
+  <text x="92" y="248" fill="#7dd3fc" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="500">Argon2id | PDO | Session hardening | SQL rate limiting</text>
+
+  <!-- Shield + soft glow rings (no filters, GitHub-safe) -->
+  <g transform="translate(1000 88)">
+    <circle cx="48" cy="48" r="58" fill="#22d3ee" opacity="0.08"/>
+    <circle cx="48" cy="48" r="52" fill="#38bdf8" opacity="0.06"/>
+    <circle cx="48" cy="48" r="46" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.5"/>
+    <path d="M48 22L62 32V52C62 62 48 70 48 70S34 62 34 52V32Z" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="48" cy="48" r="6" fill="#22d3ee" opacity="0.85"/>
+  </g>
+
+  <line x1="92" y1="268" x2="820" y2="268" stroke="#334155" stroke-width="1" opacity="0.8"/>
+  <text x="92" y="292" fill="#64748b" font-family="Consolas, monospace" font-size="12" letter-spacing="0.06em">PURE PHP | ZERO FRAMEWORKS | DEFENSE IN DEPTH</text>
+  <text x="92" y="322" fill="#7dd3fc" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Explore the repository below - audit the source code.</text>
+</svg>
