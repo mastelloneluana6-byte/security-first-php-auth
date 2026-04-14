@@ -29,7 +29,7 @@
     <text x="620" y="62">password_hash($pass, PASSWORD_ARGON2ID, $opts);</text>
     <text x="620" y="82">session_regenerate_id(true);</text>
     <text x="620" y="102">header('X-Frame-Options: DENY');</text>
-    <text x="620" y="122">INSERT INTO failed_login_attempts (ip_address ...)</text>
+    <text x="620" y="122">INSERT INTO login_attempts (ip_address ...)</text>
     <text x="620" y="142">hash_equals($_SESSION['_csrf'], $token);</text>
     <text x="620" y="162">PDO::ATTR_EMULATE_PREPARES =&gt; false</text>
     <text x="620" y="182">if ($rateLimiter-&gt;isBlocked($ip)) { ... }</text>
